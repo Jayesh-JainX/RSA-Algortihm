@@ -40,27 +40,20 @@ RSA (Rivest-Shamir-Adleman) is a widely used asymmetric cryptographic algorithm 
 
 ## Security Considerations
 
-Please note the following important security considerations when using or modifying this code:
+Please note that while this code provides a basic understanding of RSA cryptography, it lacks several crucial security features required for production-level applications:
 
-- This program is intended for educational purposes and serves as a basic introduction to user authentication and encryption concepts.
-- The encryption and authentication methods used in this code are rudimentary and may not provide adequate security against modern threats.
-- **Do not use this code as-is for handling sensitive information or in production systems.**
+- **Error Handling**: The code does not robustly handle errors, including input validation and cryptographic exceptions.
+- **Secure Key Storage**: In a real-world scenario, RSA keys must be stored securely to prevent unauthorized access.
+- **Random Number Generation**: The quality of random number generation affects the security of cryptographic operations.
+- **Key Management**: Proper key management practices involve rotation, backup, and protection of keys.
+- **Cryptographic Padding**: The code does not employ padding schemes, which are essential to prevent attacks like padding oracle attacks.
 
-It's recommended to address the following concerns before using this code in any meaningful capacity:
-
-- **Encryption**: While AES encryption is used, the encryption key generation and management are simplistic. Consider using a more robust key management strategy, such as a dedicated key management service.
-- **Authentication**: This code lacks proper mechanisms for protecting against attacks like brute force and timing attacks. Implement more advanced authentication techniques.
-- **Error Handling**: The code lacks comprehensive error handling, which is crucial for identifying and responding to unexpected scenarios securely.
-- **Code Review**: Conduct a thorough security code review to identify potential vulnerabilities and address them.
-- **Dependency Management**: Ensure all libraries and dependencies used are up to date and secure.
-
-Remember that security is an ongoing process, and staying informed about the latest security practices is essential for creating secure software.
+For production applications, consult cryptographic experts, libraries, and frameworks to implement secure encryption and decryption processes.
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+Contributions are welcome! If you find issues or want to enhance the code, feel free to submit pull requests.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-Feel free to replace this section in your README.md file, and remember to review the entire document to make sure it accurately reflects your project's information and purpose.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
